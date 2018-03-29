@@ -91,11 +91,8 @@ h1 {
   float: left;
   cursor: pointer; }
 
-i#social-icon-two {
-  padding-left: 40px; }
-
-i#social-icon-three {
-  padding-left: 80px; }
+.social-icon {
+	margin: 10px; }
 
 .coordinates {
   font-size: 1rem;
