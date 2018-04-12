@@ -1,3 +1,4 @@
+* { padding: 0; margin: 0; }
 html {
   font-size: 62.5%;
   width: 100%;
@@ -7,7 +8,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
@@ -53,7 +55,8 @@ h1 {
       width: 1.5rem;
       height: .2rem;
       background: #f7f5f6;
-      display: block; }
+      display: block;
+     }
     .portfolio-container .header .menu-icon-lines:before, .portfolio-container .header .menu-icon-lines:after {
       content: '';
       width: 1.5rem;
@@ -176,6 +179,17 @@ h1 {
   font-weight: 400;
   opacity: .8; }
 
+  .ellipse-container .name {
+    margin-top: 60px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    opacity: .9;
+    font-weight: 400;
+    letter-spacing: 0.7rem;
+    text-align: center;
+  }
+
 .ellipse-container .greeting:after {
   content: '';
   width: .3rem;
@@ -198,4 +212,104 @@ h1 {
   100% {
     transform: rotate(360deg); } }
 
+
+.chevron_container{
+  width: 100%;
+  display: block;
+  height: 40px;
+  position: absolute;
+  bottom: 210px;
+  left: 0;
+}
+
+.chevron_container i{
+  font-size: 75px;
+  color: #f7f5f6;
+  opacity: 0.8;
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  text-align: center;
+}
+
+.chevron_container i:hover{
+  color: white;
+  cursor: pointer;
+}
+
+
+.page_two{
+  width: 100vw;
+  height: 100vh;
+  background-color:#f7f5f6;
+  display: table;
+  overflow: hidden;
+  position: relative;
+}
+
+.page_2_center{
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.page_2_center:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 1px;
+  background-color: #101010;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.section_title{
+  font-family: 'Times New Roman';
+  color: #101010;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.section_sub{
+  text-align: center;
+  color: #101010;
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+.section_sub a{
+  color: #FF4366;
+}
+
+.section_sub a:hover{
+  cursor: pointer;
+  border-bottom: solid 1px #FF4366;
+}
+
+.medium_spacer{
+  width: 100%;
+  display: block;
+  height: 40px;
+  clear: both;
+}
+
+i.chevron-two{
+  color: #000;
+}
+
+i.chevron-two:hover{
+  color: #3b444b;
+}
+
+.chevron-two {
+  padding-top: 80px;
+}
 /*# sourceMappingURL=output.css.map */
