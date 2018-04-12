@@ -7,17 +7,87 @@
 	<title>My Portfolio</title>
 	<link rel="shortcut icon" href="http://moziru.com/images/gerbera-clipart-hot-pink-flower-6.png">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=EB Garamond" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/output.css">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/output.css">	
 </head>
 <body>
+	<style>
+		#sidebar {
+			position: fixed;
+			width:300px;
+			height:100%;
+			background: #f7f5f6;
+			z-index: 5;
+			left: -300px;
+			transition: all 500ms linear;
+		}
+		#sidebar.active{
+			left: 0px;
+		}
+		#sidebar ul li {
+			color: rgba(12, 12, 12, 0.7);
+			text-align: center;
+			list-style: none;
+			font-family: 'EB Garamond';
+			padding: 22px 10px;
+			border-bottom: 1px solid rgba(100,100,100,0.2);
+			cursor: pointer;
+			font-size: 16px;
+		}
+		#sidebar ul li:hover {
+			background: rgba(229,223,213,0.5);
+		}
+		li.name-nav {
+			padding: 35px 5px !important;
+			font-size: 32px !important;
+			border-bottom: 1px solid #000;
+		}
+		span.name-nav-last {
+			font-weight: 600;
+		}
+		#sidebar .toggle-btn{
+			position: absolute;
+			left: 330px;
+			top: 20px;
+			cursor: pointer;
+		}
+		#sidebar .toggle-btn span {
+			display: block;
+			width: 30px;
+			height: 5px;
+			background:#f7f5f6;
+			margin: 5px 0; 
+		}
+
+	</style>
+
+	<div id="sidebar">
+		<div class="toggle-btn" onclick="toggleSidebar()">
+			<span style="border:1px solid #000"></span>
+			<span style="border:1px solid #000"></span>
+			<span style="border:1px solid #000"></span>
+		</div>
+		<ul>
+			<li class="name-nav" style="border-right:4px solid #8D1BBE">Jas <span class="name-nav-last">Chhokar</span><br>
+			<span style="font-size: 16px; letter-spacing: 1px;">Front-End Web Developer</span></li>
+			<li style="border-right:4px solid #FE7D60  ">Profile</li>
+			<li style="border-right:4px solid #4ACFA7">About</li>
+			<li style="border-right:4px solid #AB58E6   ">My Work / Projects</li>
+			<li style="border-right:4px solid #61B7EC ">Skills</li>
+			<li style="border-right:4px solid orange">Interests</li>
+			<li style="border-right:4px solid #F6D982">Contact</li>
+		</ul>
+	</div>
+
 	<div class="container">
 		<div class="container-item portfolio-container">
 			<div class="content-wrapper">
 				<header class="header">
 					<div class="menu-icon header-item">
-						<span class="menu-icon-lines"></span>
-						<h1 class="heading header-item">Developer Portfolio</h1>
+						<!--<span class="menu-icon-lines"></span>-->
+						<h1 class="heading header-item">&nbsp;PORTFOLIO </h1>
 					</div>
 
 					<ul class="social-container header-item">
@@ -36,7 +106,7 @@
 				<p class="coordinates">N 43° 39.15' 9" / W 79° 22.9' 54.0001"</p>
 				<div class="ellipse-container">
 					<h2 class="greeting">Explore</h2>
-
+					<h3 class="name"><em>Jaskiran Chhokar</em></h3>
 					<div class="ellipse ellipse-outer--thin">
 						<div class="ellipse ellipse-orbit"></div>
 					</div>
@@ -44,7 +114,49 @@
 					<div class="ellipse ellipse-outer--thick"></div>
 				</div>
 			</div>
+			<div class="chevron_container wow pulse" data-wow-iteration="infinite">
+				&nbsp;<i class="fa fa-angle-down"></i>
+			</div>
 		</div>
 	</div>
+
+	<div class="page_two">
+		<div class="center_background">
+			<div class="page_2_center">
+				<h1 class="section_title">Who am I?</h1>
+				<p class="section_sub">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					<a href="">Link</a> Quisque iaculis arcu sit amet rhoncus tristique.
+					<a href="">Link</a>, Vestibulum in mauris quis est tristique imperdiet ut sit amet nibh.
+					<a href="">Link</a>.
+				</p>
+			</div>
+		</div>
+
+		<div class="chevron_container chevron-two">
+			<i class="fa fa-chevron-circle-down chevron-two"></i>
+		</div>
+	</div>
+
+	<!-- script tags -->
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- wow js -->
+    <script type="text/javascript" src="js/wow.min.js"></script>
+	<script>
+			$('.container .chevron_container i').click(function(){
+				$('html,body').animate({
+					scrollTop: $(window).height()
+				}, 1200);
+			});
+
+			function toggleSidebar(){
+				document.getElementById("sidebar").classList.toggle('active');
+			}
+
+			$(function() {
+				new WOW().init();
+			}); 
+	</script>
 </body>
 </html>
