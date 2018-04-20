@@ -33,7 +33,9 @@ h1 {
   overflow: hidden;
   display: table;
   font-family: "Montserrat", sans-serif;
-  color: #f7f5f6; }
+  color: #f7f5f6;
+  display: table;
+  background-attachment: fixed;}
   .portfolio-container .content-wrapper {
     max-width: 1200px;
     width: 90%;
